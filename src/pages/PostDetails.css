@@ -1,0 +1,277 @@
+.post-details-page {
+  min-height: 100vh;
+  background: #f7f7f9;
+  padding: 4px 20px 30px;
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(330px, 1fr);
+  gap: 32px;
+}
+
+/* ==========================
+   LEFT SIDE
+========================== */
+
+.post-main {
+  min-width: 0;
+}
+
+.post-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 27px;
+}
+
+/* TITLE */
+
+.post-title {
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0 0 25px;
+  color: #111;
+}
+
+/* META */
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 23px;
+}
+
+.post-meta .author {
+  color: #666;
+}
+
+/* IMAGE */
+
+.post-detail-image {
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.post-image-placeholder {
+  width: 100%;
+  height: 375px;
+  background: #eeeeee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin-bottom: 25px;
+}
+
+/* CONTENT */
+
+.post-content {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #444;
+  white-space: pre-wrap;
+  margin-bottom: 27px;
+}
+
+/* BUTTONS */
+
+.post-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 11px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  background: white;
+}
+
+.edit-button {
+  border: 1px solid #5333ed;
+  color: #5333ed;
+}
+
+.delete-button {
+  border: 1px solid #ff4b4b;
+  color: #ff4b4b;
+}
+
+.edit-button:hover {
+  background: #f5f2ff;
+}
+
+.delete-button:hover {
+  background: #fff2f2;
+}
+
+/* ==========================
+   COMMENTS
+========================== */
+
+.comments-sidebar {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  padding: 27px;
+  height: fit-content;
+}
+
+.comments-sidebar > h2 {
+  font-size: 25px;
+  margin: 0 0 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* COMMENT */
+
+.comment-item {
+  display: flex;
+  gap: 14px;
+  padding: 0 0 25px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.comment-avatar {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: #eee8ff;
+  color: #5535d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.comment-body h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+  color: #222;
+}
+
+.comment-date {
+  color: #999;
+  font-size: 14px;
+}
+
+.comment-body p {
+  margin: 12px 0 0;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.no-comments {
+  color: #888;
+  padding: 15px 0;
+}
+
+/* ==========================
+   ADD COMMENT
+========================== */
+
+.add-comment {
+  margin-top: 28px;
+}
+
+.add-comment h2 {
+  font-size: 23px;
+  margin-bottom: 20px;
+}
+
+.add-comment textarea {
+  width: 100%;
+  height: 110px;
+  box-sizing: border-box;
+  resize: vertical;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+
+.add-comment textarea:focus {
+  border-color: #5333ed;
+}
+
+.add-comment button {
+  width: 100%;
+  margin-top: 7px;
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  background: #5533e8;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background: #4524cc;
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+.details-loading {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 900px) {
+  .post-details-page {
+    grid-template-columns: 1fr;
+  }
+
+  .post-detail-image,
+  .post-image-placeholder {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .post-details-page {
+    padding: 10px;
+  }
+
+  .post-card,
+  .comments-sidebar {
+    padding: 18px;
+  }
+
+  .post-title {
+    font-size: 28px;
+  }
+
+  .post-meta {
+    flex-wrap: wrap;
+  }
+
+  .post-detail-image,
+  .post-image-placeholder {
+    height: 220px;
+  }
+}

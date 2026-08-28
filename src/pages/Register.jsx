@@ -10,7 +10,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const response = await fetch("YOUR_RENDER_BACKEND_URL/api/auth/register", {
+      const response = await fetch("https://blog1-1-ivcm.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
